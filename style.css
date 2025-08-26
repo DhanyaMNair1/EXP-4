@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.77), rgba(0, 0, 0, 0.85)),
+                url('hall.jpg')
+                no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background: rgba(15, 15, 15, 0.98);
+    padding: 18px 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .brand {
+    font-size: 1.25em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .nav-links li a {
+    color: #fff;
+    text-decoration: none; 
+    font-size: 1em;
+    transition: color 0.18s;
+}
+
+.navbar .nav-links li a:hover {
+    color: #ffc107;
+}
+
+/* Layout */
+.main-wrapper {
+    max-width: 1100px;
+    margin: 55px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 73vh;
+    gap: 50px;
+}
+
+.cta-section,
+.login-section {
+    background: rgba(17, 17, 17, 0.82);
+    border-radius: 14px;
+    padding: 42px 38px;
+    margin-top: 30px;
+    box-shadow: 0 8px 32px 0 rgba(30, 30, 30, 0.20);
+}
+
+/* CTA Section */
+.cta-section {
+    max-width: 420px;
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cta-section h1 {
+    font-size: 2.1rem;
+    font-weight: bold;
+    margin-bottom: 13px;
+    line-height: 1.22;
+}
+
+.cta-section p {
+    font-size: 1.05em;
+    margin-bottom: 22px; 
+    color: #f7eaaf;
+    opacity: 0.96;
+}
+
+.cta-btn {
+    background: #ffc107;
+    color: #242424;
+    font-weight: 700;
+    border: none;
+    border-radius: 5.5px;
+    padding: 12px 34px;
+    font-size: 1.07em;
+    cursor: pointer;
+    transition: background 0.18s;
+}
+
+.cta-btn:hover {
+    background: #ffdc60;
+}
+
+/* Login Section */
+.login-section {
+    max-width: 330px;
+    flex: 1 1 42%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 275px;
+}
+
+.login-section h2 {
+    color: #ffc107;
+    margin-bottom: 16px;
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    margin-bottom: 6px;
+    color: #ffe49d;
+    font-size: 0.99em; 
+    font-weight: 500;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 9px 12px;
+    border-radius: 5px;
+    border: none;
+    background: #232323;
+    color: #ffc107;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.login-form .remember-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.97em;
+}
+
+.login-form .remember-row input[type="checkbox"] {
+    accent-color: #ffc107;
+    margin-right: 7px;
+}
+
+.login-form button {
+    width: 100%;
+    background: #ffc107;
+    color: #262626;
+    padding: 11px 0;
+    font-size: 1.05em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 3px;
+    transition: background 0.19s;
+}
+
+.login-form button:hover {
+    background: #ffe285;
+}
+
+.signup-link {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #e5e5e5;
+    width: 100%;
+}
+
+.signup-link a {
+    color: #ffc107;
+    text-decoration: underline;
+    margin-left: 2px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .main-wrapper {
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 10px;
+        align-items: center;
+    }
+    .cta-section,
+    .login-section {
+        width: 97vw;
+        max-width: 420px;
+        margin-top: 10px;
+        padding: 28px 14px;
+    }
+}
+
+@media (max-width: 510px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 9px;
+    }
+    .main-wrapper {
+        margin: 25px 0 0 0;
+    }
+    .cta-section h1 {
+        font-size: 1.23em;
+    }
+}
+
